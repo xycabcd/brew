@@ -18,7 +18,7 @@ defaults:
 
 jobs:
   spdx:
-    if: github.repository == 'Homebrew/brew'
+    if: github.repository == 'brewAyW/brew'
     runs-on: ubuntu-22.04
     steps:
       - name: Set up Homebrew
@@ -32,7 +32,7 @@ jobs:
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@master
         with:
-          username: BrewTestBot
+          username: xycabcd
 
       - name: Set up commit signing
         uses: Homebrew/actions/setup-commit-signing@master

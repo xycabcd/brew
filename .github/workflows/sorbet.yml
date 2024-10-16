@@ -24,7 +24,7 @@ defaults:
 
 jobs:
   tapioca:
-    if: github.repository == 'Homebrew/brew'
+    if: github.repository == 'brewAyW/brew'
     runs-on: macos-15
     steps:
       - name: Set up Homebrew
@@ -39,7 +39,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: Homebrew/actions/git-user-config@master
         with:
-          username: BrewTestBot
+          username: xycabcd
 
       - name: Set up commit signing
         if: github.event_name != 'pull_request'

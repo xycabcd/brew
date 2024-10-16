@@ -28,7 +28,7 @@ defaults:
 jobs:
   updates:
     runs-on: ubuntu-22.04
-    if: github.repository == 'Homebrew/brew'
+    if: github.repository == 'brewAyW/brew'
     steps:
       - name: Setup Homebrew
         id: set-up-homebrew
@@ -41,13 +41,13 @@ jobs:
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@master
         with:
-          username: BrewTestBot
+          username: xycabcd
 
       - name: Set up commit signing
         uses: Homebrew/actions/setup-commit-signing@master
         with:
           signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
-
+        
       - name: Cache Bundler RubyGems
         uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8 # v4
         with:
@@ -58,6 +58,7 @@ jobs:
       - name: Update sponsors, maintainers, manpage and completions
         id: update
         run: |
+          echo $SIGNING_KEY
           git fetch origin
 
           if [[ -n "$GITHUB_REF_NAME" && "$GITHUB_REF_NAME" != "master" ]]

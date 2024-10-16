@@ -28,7 +28,7 @@ concurrency:
 
 jobs:
   workflow_syntax:
-    if: github.repository_owner == 'Homebrew'
+    if: github.repository_owner == 'brewAyW'
     runs-on: ubuntu-22.04
     steps:
       - name: Set up Homebrew

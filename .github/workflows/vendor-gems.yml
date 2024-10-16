@@ -26,7 +26,7 @@ defaults:
 
 jobs:
   vendor-gems:
-    if: github.repository_owner == 'Homebrew'
+    if: github.repository_owner == 'brewAyW'
     runs-on: macos-15
     steps:
       - name: Set up Homebrew
@@ -41,7 +41,7 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         uses: Homebrew/actions/git-user-config@master
         with:
-          username: BrewTestBot
+          username: xycabcd
 
       - name: Set up commit signing
         if: github.event_name == 'workflow_dispatch'

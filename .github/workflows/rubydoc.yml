@@ -22,7 +22,7 @@ defaults:
 
 jobs:
   rubydoc:
-    if: github.repository == 'Homebrew/brew'
+    if: github.repository == 'brewAyW/brew'
     runs-on: ubuntu-22.04
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/rubydoc/Gemfile

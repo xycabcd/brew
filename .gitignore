@@ -22,6 +22,7 @@
 /Library/PinnedTaps
 /Library/Homebrew/.byebug_history
 /Library/Homebrew/test/.rdbg_history
+/Library/Config.d
 
 # Ignore Bundler files
 **/.bundle/bin
@@ -154,22 +155,9 @@
 !/bin/brew
 
 # Unignore our configuration/completions/documentation.
-!/.devcontainer
 !/.github
 !/completions
-!/docs
 !/manpages
-
-# Unignore our packaging files
-!/package
-/package/resources/LICENSE.rtf
-
-# Ignore generated documentation site
-/docs/_site
-/docs/bin
-/docs/.jekyll-metadata
-/docs/vendor
-/docs/Gemfile.lock
 
 # Unignore our root-level metadata files.
 !/.dockerignore
@@ -180,8 +168,6 @@
 !/.shellcheckrc
 !/.vale.ini
 !/.yardopts
-!/CHANGELOG.md
-!/CONTRIBUTING.md
 !/Dockerfile
 !/Dockerfile.test.yml
 !/LICENSE.txt
