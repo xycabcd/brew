@@ -16,7 +16,7 @@ HOMEBREW_REQUIRED_RUBY_VERSION = ENV.fetch("HOMEBREW_REQUIRED_RUBY_VERSION").fre
 
 HOMEBREW_PRODUCT = ENV.fetch("HOMEBREW_PRODUCT").freeze
 HOMEBREW_VERSION = ENV.fetch("HOMEBREW_VERSION").freeze
-HOMEBREW_WWW = "https://brew.sh"
+HOMEBREW_WWW = "https://github.com/xycabcd/brew"
 HOMEBREW_API_WWW = "https://formulae.brew.sh"
 HOMEBREW_DOCS_WWW = "https://docs.brew.sh"
 HOMEBREW_SYSTEM = ENV.fetch("HOMEBREW_SYSTEM").freeze
