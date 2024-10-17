@@ -50,13 +50,13 @@ module Homebrew
         global_options:             global_options_manpage,
         environment_variables:      env_vars_manpage,
         #lead:                       readme.read[/(Homebrew's \[Project Leader.*\.)/, 1]
-                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
         #plc:                        readme.read[/(Homebrew's \[Project Leadership Committee.*\.)/, 1]
-                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
-       # tsc:                        readme.read[/(Homebrew's \[Technical Steering Committee.*\.)/, 1]
-                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        #tsc:                        readme.read[/(Homebrew's \[Technical Steering Committee.*\.)/, 1]
+        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
         #maintainers:                readme.read[/(Homebrew's maintainers .*\.)/, 1]
-                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
         #alumni:                     readme.read[/(Former maintainers .*\.)/, 1]
                                       .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
       )
