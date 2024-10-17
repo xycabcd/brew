@@ -16,11 +16,11 @@ module Homebrew
       :environment_variables,
       :global_cask_options,
       :global_options,
-      #:lead,
-      #:maintainers,
+      :lead,
+      :maintainers,
       :official_external_commands,
-      #:plc,
-      #:tsc,
+      :plc,
+      :tsc,
       keyword_init: true,
     )
 
@@ -41,7 +41,7 @@ module Homebrew
 
     def self.build_man_page(quiet:)
       template = (SOURCE_PATH/"brew.1.md.erb").read
-      readme = HOMEBREW_REPOSITORY/"README.md"
+      readme = HOMEBREW_REPOSITORY/"ORIGINAL_README.md"
       variables = Variables.new(
         commands:                   generate_cmd_manpages(Commands.internal_commands_paths),
         developer_commands:         generate_cmd_manpages(Commands.internal_developer_commands_paths),
@@ -49,16 +49,16 @@ module Homebrew
         global_cask_options:        global_cask_options_manpage,
         global_options:             global_options_manpage,
         environment_variables:      env_vars_manpage,
-        #lead:                       readme.read[/(Homebrew's \[Project Leader.*\.)/, 1]
-        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
-        #plc:                        readme.read[/(Homebrew's \[Project Leadership Committee.*\.)/, 1]
-        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
-        #tsc:                        readme.read[/(Homebrew's \[Technical Steering Committee.*\.)/, 1]
-        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
-        #maintainers:                readme.read[/(Homebrew's maintainers .*\.)/, 1]
-        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
-        #alumni:                     readme.read[/(Former maintainers .*\.)/, 1]
-        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        lead:                       readme.read[/(Homebrew's \[Project Leader.*\.)/, 1]
+                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        plc:                        readme.read[/(Homebrew's \[Project Leadership Committee.*\.)/, 1]
+                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        tsc:                        readme.read[/(Homebrew's \[Technical Steering Committee.*\.)/, 1]
+                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        maintainers:                readme.read[/(Homebrew's maintainers .*\.)/, 1]
+                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        alumni:                     readme.read[/(Former maintainers .*\.)/, 1]
+                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
       )
 
       ERB.new(template, trim_mode: ">").result(variables.instance_eval { binding })

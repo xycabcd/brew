@@ -172,6 +172,7 @@
 !/Dockerfile.test.yml
 !/LICENSE.txt
 !/README.md
+!/ORIGINAL_README.md
 
 # Unignore tests' bundle config
 !/Library/Homebrew/test/.bundle/config
