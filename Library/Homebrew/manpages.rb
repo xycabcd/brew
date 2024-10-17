@@ -58,7 +58,7 @@ module Homebrew
         #maintainers:                readme.read[/(Homebrew's maintainers .*\.)/, 1]
         #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
         #alumni:                     readme.read[/(Former maintainers .*\.)/, 1]
-                                      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
+        #                              .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
       )
 
       ERB.new(template, trim_mode: ">").result(variables.instance_eval { binding })
