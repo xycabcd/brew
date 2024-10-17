@@ -16,11 +16,11 @@ module Homebrew
       :environment_variables,
       :global_cask_options,
       :global_options,
-      :lead,
-      :maintainers,
-      :official_external_commands,
-      :plc,
-      :tsc,
+      #:lead,
+      #:maintainers,
+      #:official_external_commands,
+      #:plc,
+      #:tsc,
       keyword_init: true,
     )
 
@@ -49,15 +49,15 @@ module Homebrew
         global_cask_options:        global_cask_options_manpage,
         global_options:             global_options_manpage,
         environment_variables:      env_vars_manpage,
-        lead:                       readme.read[/(Homebrew's \[Project Leader.*\.)/, 1]
+        #lead:                       readme.read[/(Homebrew's \[Project Leader.*\.)/, 1]
                                       .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
-        plc:                        readme.read[/(Homebrew's \[Project Leadership Committee.*\.)/, 1]
+        #plc:                        readme.read[/(Homebrew's \[Project Leadership Committee.*\.)/, 1]
                                       .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
-        tsc:                        readme.read[/(Homebrew's \[Technical Steering Committee.*\.)/, 1]
+       # tsc:                        readme.read[/(Homebrew's \[Technical Steering Committee.*\.)/, 1]
                                       .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
-        maintainers:                readme.read[/(Homebrew's maintainers .*\.)/, 1]
+        #maintainers:                readme.read[/(Homebrew's maintainers .*\.)/, 1]
                                       .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
-        alumni:                     readme.read[/(Former maintainers .*\.)/, 1]
+        #alumni:                     readme.read[/(Former maintainers .*\.)/, 1]
                                       .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1'),
       )
 
