@@ -18,7 +18,7 @@ module Homebrew
       :global_options,
       #:lead,
       #:maintainers,
-      #:official_external_commands,
+      :official_external_commands,
       #:plc,
       #:tsc,
       keyword_init: true,
