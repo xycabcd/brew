@@ -6,7 +6,6 @@ require "erb"
 
 SOURCE_PATH = (HOMEBREW_LIBRARY_PATH/"manpages").freeze
 TARGET_MAN_PATH = (HOMEBREW_REPOSITORY/"manpages").freeze
-TARGET_DOC_PATH = (HOMEBREW_REPOSITORY/"docs").freeze
 module Homebrew
   # Helper functions for generating homebrew manual.
   module Manpages
@@ -34,10 +33,6 @@ module Homebrew
       markup = build_man_page(quiet:)
       root, warnings = Parser::Ronn.parse(markup)
       $stderr.puts(warnings)
-
-      roff, warnings = Converter::Kramdown.convert(root)
-      $stderr.puts(warnings)
-      File.write(TARGET_DOC_PATH/"Manpage.md", roff)
 
       roff, warnings = Converter::Roff.convert(root)
       $stderr.puts(warnings)
