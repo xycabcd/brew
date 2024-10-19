@@ -28,7 +28,7 @@ module Homebrew
         Completions.update_shell_completions!
 
         diff = system_command "git", args: [
-          "-C", HOMEBREW_REPOSITORY, "diff", "--exit-code", "docs/Manpage.md", "manpages", "completions"
+          "-C", HOMEBREW_REPOSITORY, "diff", "--exit-code", "manpages", "completions"
         ]
         if diff.status.success?
           ofail "No changes to manpage or completions."

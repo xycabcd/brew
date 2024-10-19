@@ -549,18 +549,6 @@ __fish_brew_complete_arg 'config' -l quiet -d 'Make some output more quiet'
 __fish_brew_complete_arg 'config' -l verbose -d 'Make some output more verbose'
 
 
-__fish_brew_complete_cmd 'contributions' 'Summarise contributions to Homebrew repositories'
-__fish_brew_complete_arg 'contributions' -l csv -d 'Print a CSV of contributions across repositories over the time period'
-__fish_brew_complete_arg 'contributions' -l debug -d 'Display any debugging information'
-__fish_brew_complete_arg 'contributions' -l from -d 'Date (ISO-8601 format) to start searching contributions. Omitting this flag searches the last year'
-__fish_brew_complete_arg 'contributions' -l help -d 'Show this message'
-__fish_brew_complete_arg 'contributions' -l quiet -d 'Make some output more quiet'
-__fish_brew_complete_arg 'contributions' -l repositories -d 'Specify a comma-separated list of repositories to search. Supported repositories: `brew`, `core`, `cask`, `aliases`, `bundle`, `command-not-found`, `test-bot` and `services`. Omitting this flag, or specifying `--repositories=primary`, searches only the main repositories: brew,core,cask. Specifying `--repositories=all`, searches all repositories. '
-__fish_brew_complete_arg 'contributions' -l to -d 'Date (ISO-8601 format) to stop searching contributions'
-__fish_brew_complete_arg 'contributions' -l user -d 'Specify a comma-separated list of GitHub usernames or email addresses to find contributions from. Omitting this flag searches maintainers'
-__fish_brew_complete_arg 'contributions' -l verbose -d 'Make some output more verbose'
-
-
 __fish_brew_complete_cmd 'create' 'Generate a formula or, with `--cask`, a cask for the downloadable file at URL and open it in the editor'
 __fish_brew_complete_arg 'create' -l HEAD -d 'Indicate that URL points to the package\'s repository rather than a file'
 __fish_brew_complete_arg 'create' -l autotools -d 'Create a basic template for an Autotools-style build'
@@ -1356,15 +1344,6 @@ __fish_brew_complete_arg 'reinstall; and not __fish_seen_argument -l cask -l cas
 __fish_brew_complete_arg 'reinstall; and not __fish_seen_argument -l formula -l formulae' -a '(__fish_brew_suggest_casks_all)'
 
 
-__fish_brew_complete_cmd 'release' 'Create a new draft Homebrew/brew release with the appropriate version number and release notes'
-__fish_brew_complete_arg 'release' -l debug -d 'Display any debugging information'
-__fish_brew_complete_arg 'release' -l help -d 'Show this message'
-__fish_brew_complete_arg 'release' -l major -d 'Create a major release'
-__fish_brew_complete_arg 'release' -l minor -d 'Create a minor release'
-__fish_brew_complete_arg 'release' -l quiet -d 'Make some output more quiet'
-__fish_brew_complete_arg 'release' -l verbose -d 'Make some output more verbose'
-
-
 __fish_brew_complete_cmd 'remove' 'Uninstall a formula or cask'
 __fish_brew_complete_arg 'remove' -l cask -d 'Treat all named arguments as casks'
 __fish_brew_complete_arg 'remove' -l debug -d 'Display any debugging information'
@@ -1692,13 +1671,6 @@ __fish_brew_complete_arg 'update-license-data' -l quiet -d 'Make some output mor
 __fish_brew_complete_arg 'update-license-data' -l verbose -d 'Make some output more verbose'
 
 
-__fish_brew_complete_cmd 'update-maintainers' 'Update the list of maintainers in the `Homebrew/brew` README'
-__fish_brew_complete_arg 'update-maintainers' -l debug -d 'Display any debugging information'
-__fish_brew_complete_arg 'update-maintainers' -l help -d 'Show this message'
-__fish_brew_complete_arg 'update-maintainers' -l quiet -d 'Make some output more quiet'
-__fish_brew_complete_arg 'update-maintainers' -l verbose -d 'Make some output more verbose'
-
-
 __fish_brew_complete_cmd 'update-python-resources' 'Update versions for PyPI resource blocks in formula'
 __fish_brew_complete_arg 'update-python-resources' -l debug -d 'Display any debugging information'
 __fish_brew_complete_arg 'update-python-resources' -l exclude-packages -d 'Exclude these packages when finding resources'
@@ -1729,13 +1701,6 @@ __fish_brew_complete_arg 'update-reset' -l debug -d 'Display any debugging infor
 __fish_brew_complete_arg 'update-reset' -l help -d 'Show this message'
 __fish_brew_complete_arg 'update-reset' -l quiet -d 'Make some output more quiet'
 __fish_brew_complete_arg 'update-reset' -l verbose -d 'Make some output more verbose'
-
-
-__fish_brew_complete_cmd 'update-sponsors' 'Update the list of GitHub Sponsors in the `Homebrew/brew` README'
-__fish_brew_complete_arg 'update-sponsors' -l debug -d 'Display any debugging information'
-__fish_brew_complete_arg 'update-sponsors' -l help -d 'Show this message'
-__fish_brew_complete_arg 'update-sponsors' -l quiet -d 'Make some output more quiet'
-__fish_brew_complete_arg 'update-sponsors' -l verbose -d 'Make some output more verbose'
 
 
 __fish_brew_complete_cmd 'update-test' 'Run a test of `brew update` with a new repository clone'

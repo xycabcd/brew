@@ -1,0 +1,8 @@
+alias
+bundle
+command-not-found-init
+services
+test-bot
+unalias
+which-formula
+which-update

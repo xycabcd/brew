@@ -26,7 +26,6 @@ command
 commands
 completions
 config
-contributions
 create
 debugger
 deps
@@ -80,7 +79,6 @@ pyenv-sync
 rbenv-sync
 readall
 reinstall
-release
 remove
 rm
 rubocop
@@ -108,10 +106,8 @@ untap
 up
 update
 update-license-data
-update-maintainers
 update-python-resources
 update-reset
-update-sponsors
 update-test
 upgrade
 uses
